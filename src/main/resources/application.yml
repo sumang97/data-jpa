@@ -11,8 +11,17 @@ spring:
       hibernate:
         # show_sql: true
         format_sql: true
+
+  data:
+    web:
+      pageable:
+        default-page-size: 10
+        max-page-size: 2000
+        one-indexed-parameters: true
 logging.level:
   org.hibernate.SQL: debug
+server:
+  port: 8081
 # org.hibernate.type: trace
 
 # H2 -> jdbc:h2:tcp://localhost/~/datajpa
